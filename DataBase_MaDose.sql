@@ -2,7 +2,7 @@ CREATE DATABASE IF NOT EXISTS ma_dose;
 
 CREATE TABLE IF NOT EXISTS utilisateur
 (
-    email VARCHAR(100),
+    email VARCHAR(100) PRIMARY KEY NOT NULL,
     pseudo VARCHAR(100),
     date_naissance DATE,
     date_inscription DATE,
@@ -12,7 +12,7 @@ CREATE TABLE IF NOT EXISTS utilisateur
 
 CREATE TABLE IF NOT EXISTS recette
 (
-    nom_recette VARCHAR(100),
+    nom_recette VARCHAR(100) PRIMARY KEY NOT NULL,
     score INT,
     date_creation DATE,
     url_image VARCHAR(255),
@@ -22,7 +22,7 @@ CREATE TABLE IF NOT EXISTS recette
 
 CREATE TABLE IF NOT EXISTS ingredient
 (
-    nom_ingredient VARCHAR(50),
+    nom_ingredient VARCHAR(50) PRIMARY KEY NOT NULL,
     masse_vol INT,
     couleur VARCHAR(6)
 ) ;
